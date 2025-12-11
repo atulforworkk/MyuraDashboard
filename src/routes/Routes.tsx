@@ -14,6 +14,7 @@ import Discounts from "@/views/pages/discounts/Discounts";
 import Products from "@/views/pages/products/Products";
 import CustomerPage from "@/views/pages/customerPage/CustomerPage";
 import AddProduct from "@/views/pages/addProduct/AddProduct";
+import NewDiscount from "@/views/pages/newDiscount/NewDiscount";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path:"add-product",
         element:<AddProduct/>
+      },
+      {
+        path:"new-discount",
+        element:<NewDiscount/>
       },
     ],
   },
