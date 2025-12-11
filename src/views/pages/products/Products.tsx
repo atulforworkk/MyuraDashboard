@@ -11,7 +11,7 @@ import {
   Paper,
   Stack,
 } from "@mantine/core";
-
+import { Navigate, useNavigate } from "react-router-dom";
 type Product = {
   id: string;
   title: string;
@@ -85,7 +85,7 @@ const Products: React.FC = () => {
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState<string | null>("all");
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
-
+  const navigate = useNavigate();
   // Filtered products (search + status)
   const filteredProducts = useMemo(() => {
     return mockProducts.filter((product) => {
@@ -179,7 +179,9 @@ const Products: React.FC = () => {
 
         <Group>
           <Button variant="default">Export</Button>
-          <Button>+ Add product</Button>
+          <Button onClick={()=>{
+            navigate("/home/add-product");
+          }}>+ Add product</Button>
         </Group>
       </Group>
 

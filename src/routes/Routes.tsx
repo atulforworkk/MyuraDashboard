@@ -13,6 +13,7 @@ import Customers from "@/views/pages/customers/Customers";
 import Discounts from "@/views/pages/discounts/Discounts";
 import Products from "@/views/pages/products/Products";
 import CustomerPage from "@/views/pages/customerPage/CustomerPage";
+import AddProduct from "@/views/pages/addProduct/AddProduct";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,11 +44,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "Dashboard",
-        element: <Dashboard/>,
+        element: <Dashboard />,
       },
       {
         path: "orders",
-        element: <Orders/>,
+        element: <Orders />,
       },
       {
         path: "customer/:customerId",
@@ -55,23 +56,19 @@ const router = createBrowserRouter([
       },
       {
         path: "products",
-        element: <Products/>,
+        element: <Products />,
       },
       {
         path: "customers",
-        element: <Customers/>,
+        element: <Customers />,
       },
       {
         path: "discounts",
-        element: <Discounts/>,
+        element: <Discounts />,
       },
       {
-        path: "newtask",
-        element: <NewTask />,
-      },
-      {
-        path: "completedTask",
-        element: <CompletedTask />,
+        path:"add-product",
+        element:<AddProduct/>
       },
     ],
   },
